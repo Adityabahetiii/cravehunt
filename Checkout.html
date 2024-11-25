@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="Homepage.html" class="logo-link">
+                    <img src="C:\Users\Aditya Baheti\Desktop\Chunkyschicken\Cravehut logo design-03.png" alt="Logo" class="logo">
+                </a>
+            </div>
+
+            <!-- Deliver To -->
+            <div class="location-container">
+                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium blink-style-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 512.01 512.01" style="fill: rgb(255, 255, 255); width: 26px; height: 26px;"><path d="M388.89,314.055c-11.435-2.773-22.955,4.373-25.664,15.829c-2.731,11.456,4.373,22.955,15.829,25.664 c66.261,15.723,90.283,38.976,90.283,50.795c0,25.493-85.077,64-213.333,64c-128.235,0-213.333-38.507-213.333-64 c0-11.819,24.043-35.072,90.261-50.795c11.477-2.709,18.56-14.208,15.829-25.664c-2.709-11.456-14.229-18.603-25.664-15.829 C43.717,332.871,0.005,365.639,0.005,406.343c0,70.016,128.811,106.667,256,106.667c127.211,0,256-36.651,256-106.667 C512.005,365.639,468.293,332.871,388.89,314.055z"></path><path d="M256.015,171.681c11.776,0,21.333-9.557,21.333-21.333s-9.557-21.333-21.333-21.333s-21.333,9.557-21.333,21.333 S244.239,171.681,256.015,171.681z"></path><path d="M228.239,398.518l8.683,17.365c3.627,7.232,11.008,11.797,19.093,11.797s15.467-4.565,19.093-11.797l18.389-36.779 c22.379-44.779,49.984-88.149,76.672-130.091l12.16-19.136c15.061-23.808,23.019-51.307,23.019-79.531 c0-42.496-18.197-83.115-49.92-111.445C323.727,10.592,281.082-2.975,238.565,2.017C172.175,9.569,117.349,63.03,108.154,129.121 c-5.44,39.168,4.352,78.059,27.541,109.547C171.877,287.691,200.122,342.241,228.239,398.518z M256.015,86.347 c35.285,0,64,28.715,64,64c0,35.285-28.715,64-64,64s-64-28.715-64-64C192.015,115.062,220.73,86.347,256.015,86.347z"></path></svg>
+                <div class="location-text">
+                    <span class="deliver-to">Deliver to</span>
+                    <a href="location.html" class="location-link">
+                        <span class="location-name">Bangalore</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon down-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
+    <!-- Checkout Page Container -->
+    <div class="checkout-container">
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <a href="Homepage.html">Home</a> &gt;
+            <a href="cart.html">Cart</a> &gt;
+            <span>Checkout</span>
+        </div>
+
+        <!-- Main Content Container -->
+        <div class="content-container">
+            <!-- Left Container (Billing Information & Payment) -->
+            <div class="left-container">
+                <!-- User Information Form -->
+                <div class="user-info-form">
+                    <h2>Billing Information</h2>
+                    <form>
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" required>
+
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" required></textarea>
+
+                        <label for="pincode">Pincode</label>
+                        <input type="text" id="pincode" name="pincode" required>
+
+                        <label for="flatno">Flat/House No.</label>
+                        <input type="text" id="flatno" name="flatno" required>
+
+                    </form>
+                </div>
+                <!-- Payment Method -->
+                <div class="payment-method">
+                    <h2>Select Payment Method</h2>
+                    <div class="payment-option">
+                        <input type="radio" id="cod" name="payment-method" value="cod" checked>
+                        <label for="cod">Cash on Delivery</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Container (Cart Items & Pricing Details) -->
+            <div class="right-container">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <h2>Your Cart</h2>
+                    <div id="cart-items-container"></div> <!-- Dynamic cart items will be inserted here -->
+                </div>
+        
+                <!-- Promo Code -->
+                <div class="promo-code">
+                    
+                    <input type="text" id="promo" name="promo" placeholder="Enter code">
+                    <button type="button" onclick="applyPromoCode()">Apply</button>
+                </div>
+        
+                <!-- Pricing Details -->
+                <div class="pricing-details">
+                    <div class="pricing-item">
+                        <span class="pricing-label">Subtotal</span>
+                        <span id="subtotal" class="pricing-amount">$0.00</span>
+                    </div>
+                    <div class="pricing-item">
+                        <span class="pricing-label">Delivery Charges</span>
+                        <span id="delivery-charges" class="pricing-amount">$5.00</span>
+                    </div>
+                    <div class="pricing-item">
+                        <span class="pricing-label">Discount</span>
+                        <span id="discount" class="pricing-amount">-$0.00</span>
+                    </div>
+                    <div class="pricing-item total">
+                        <span class="pricing-label">Grand Total</span>
+                        <span id="grand-total" class="pricing-amount">$0.00</span>
+                    </div>
+                </div>
+        
+                <!-- Place Order Button -->
+                <button class="place-order-btn" onclick="placeOrder()">Place Order</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo and Company Info -->
+            <div class="footer-left">
+                <img src="C:\Users\Aditya Baheti\Desktop\Chunkyschicken\Cravehut logo design-03.png" alt="Company Logo" class="footer-logo">
+                <div class="footer-company-info">
+                    <h2>Crave Hut</h2>
+                    <div class="footer-contact">
+                        <h3>Phone:</h3>
+                        <p>123-456-7890</p>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>Email:</h3>
+                        <p>support@chuckyschicken.com</p>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>Address:</h3>
+                        <p>Chuckys Chicken - i-8 markaz, shop# g-01 ground floor plot 9, I-8 Markaz, Islamabad, 44000</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Timings Section -->
+            <div class="footer-center">
+                <div class="footer-timings">
+                    <h3>Our Timings</h3>
+                    <p>MONDAY-SUNDAY</p>
+                    <p>12:00 PM - 2:00 AM</p>
+                </div>
+            </div>
+    
+            <!-- Sitemap Section -->
+            <div class="footer-right">
+                <a href="#home"><h3>Sitemap</h3></a>
+            </div>
+        </div>
+        <!-- Horizontal Line -->
+        <hr class="footer-divider">
+        <!-- Copyright Section -->
+        <div class="footer-copyright">
+            <p>&copy; 2024 Chuckys chicken. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    const cartItemsContainer = document.getElementById("cart-items-container");
+    const subtotalElement = document.getElementById("subtotal");
+    const deliveryChargesElement = document.getElementById("delivery-charges");
+    const discountElement = document.getElementById("discount");
+    const grandTotalElement = document.getElementById("grand-total");
+    const promoInput = document.getElementById("promo");
+
+    const deliveryCharges = 50.00;
+    let discount = 0.00; 
+
+    function displayCartItems() {
+        cartItemsContainer.innerHTML = ""; 
+
+        if (cartItems.length === 0) {
+            cartItemsContainer.innerHTML = `<p>Your cart is empty.</p>`;
+            subtotalElement.textContent = `₹0.00`;
+            discountElement.textContent = `₹0.00`;
+            grandTotalElement.textContent = `₹0.00`;
+            return;
+        }
+
+        let subtotal = 0;
+
+        cartItems.forEach(item => {
+            const itemPrice = parseFloat(item.price.replace('₹', '')) * item.quantity;
+            subtotal += itemPrice;
+
+            const cartItemDiv = document.createElement("div");
+            cartItemDiv.classList.add("cart-item");
+
+            cartItemDiv.innerHTML = `
+                <div class="cart-item-image">
+                    <img src="${item.image}" alt="${item.name}" />
+                </div>
+                <div class="cart-item-details">
+                    <h4 class="cart-item-title">${item.name}</h4>
+                    <p class="cart-item-description">${item.description}</p>
+                    <p><strong>Quantity:</strong> ${item.quantity}</p>
+                    <p><strong>Price:</strong> ₹${itemPrice.toFixed(2)}</p>
+                </div>
+            `;
+
+            cartItemsContainer.appendChild(cartItemDiv);
+        });
+
+        
+        subtotalElement.textContent = `₹${subtotal.toFixed(2)}`;
+        deliveryChargesElement.textContent = `₹${deliveryCharges.toFixed(2)}`;
+        discountElement.textContent = `₹${discount.toFixed(2)}`;
+        const grandTotal = subtotal + deliveryCharges - discount;
+        grandTotalElement.textContent = `₹${grandTotal.toFixed(2)}`;
+    }
+
+    
+    function applyPromoCode() {
+        const promoCode = promoInput.value.trim();
+        let subtotal = parseFloat(subtotalElement.textContent.replace('₹', ''));
+
+        
+        const promoCodes = {
+            "SAVE10": 10,
+            "SAVE20": 20, 
+            "SAVE50": 50  
+        };
+
+        if (promoCodes[promoCode]) {
+            if (promoCode.startsWith("SAVE") && promoCodes[promoCode] <= 100) {
+                discount = (subtotal * promoCodes[promoCode]) / 100;
+            } else {
+                discount = promoCodes[promoCode];
+            }
+
+            discountElement.textContent = `₹${discount.toFixed(2)}`;
+            const grandTotal = subtotal + deliveryCharges - discount;
+            grandTotalElement.textContent = `₹${grandTotal.toFixed(2)}`;
+
+            alert(`Promo code applied successfully! You saved ₹${discount.toFixed(2)}.`);
+        } else {
+            discount = 0;
+            discountElement.textContent = `₹${discount.toFixed(2)}`;
+            const grandTotal = subtotal + deliveryCharges - discount;
+            grandTotalElement.textContent = `₹${grandTotal.toFixed(2)}`;
+
+            alert("Invalid promo code. Please try again.");
+        }
+
+        promoInput.value = "";
+    }
+
+    
+    function placeOrder() {
+    // Retrieve form data
+    const fullName = document.getElementById("full-name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const pincode = document.getElementById("pincode").value.trim();
+    const flatno = document.getElementById("flatno").value.trim();
+    const paymentMethod = document.querySelector(
+      'input[name="payment-method"]:checked'
+    )?.value;
+
+    if (!fullName || !email || !phone || !address || !pincode || !flatno) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    // Get cart items from localStorage
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    if (cartItems.length === 0) {
+      alert("Your cart is empty.");
+      return;
+    }
+
+    // Create order details object
+    const orderDetails = {
+      fullName,
+      email,
+      phone,
+      address,
+      pincode,
+      flatno,
+      paymentMethod,
+      cartItems,
+    };
+
+    // Send order details to the server
+    fetch("http://localhost/NEW FOLDER/place_order.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(orderDetails),
+    })
+      .then((response) => {
+        return response.text(); // Try to get the raw response first
+      })
+      .then((text) => {
+        try {
+          const data = JSON.parse(text); // Manually parse JSON if it's valid
+          if (data.success) {
+            alert("Your order has been placed successfully!");
+            localStorage.removeItem("cartItems");
+            // window.location.href = "confirmation.html";
+          } else {
+            throw new Error(data.message || "Unknown server error.");
+          }
+        } catch (error) {
+          alert(`An error occurred: ${error.message}`);
+        }
+      })
+      .catch((error) => {
+        console.error("Fetch error:", error);
+        alert(`An error occurred: ${error.message}`);
+      });
+  }
+    window.onload = displayCartItems;
+</script>
+

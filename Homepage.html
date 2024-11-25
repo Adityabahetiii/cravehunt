@@ -1,0 +1,2704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header with Cart Button</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="Homepage.html" class="logo-link">
+                    <img src="C:\Users\Aditya Baheti\Desktop\Chunkyschicken\Cravehut logo design-03.png" alt="Logo" class="logo">
+                </a>
+            </div>
+
+            <!-- Deliver To -->
+            <div class="location-container">
+                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium blink-style-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 512.01 512.01" style="fill: rgb(255, 255, 255); width: 26px; height: 26px;"><path d="M388.89,314.055c-11.435-2.773-22.955,4.373-25.664,15.829c-2.731,11.456,4.373,22.955,15.829,25.664 c66.261,15.723,90.283,38.976,90.283,50.795c0,25.493-85.077,64-213.333,64c-128.235,0-213.333-38.507-213.333-64 c0-11.819,24.043-35.072,90.261-50.795c11.477-2.709,18.56-14.208,15.829-25.664c-2.709-11.456-14.229-18.603-25.664-15.829 C43.717,332.871,0.005,365.639,0.005,406.343c0,70.016,128.811,106.667,256,106.667c127.211,0,256-36.651,256-106.667 C512.005,365.639,468.293,332.871,388.89,314.055z"></path><path d="M256.015,171.681c11.776,0,21.333-9.557,21.333-21.333s-9.557-21.333-21.333-21.333s-21.333,9.557-21.333,21.333 S244.239,171.681,256.015,171.681z"></path><path d="M228.239,398.518l8.683,17.365c3.627,7.232,11.008,11.797,19.093,11.797s15.467-4.565,19.093-11.797l18.389-36.779 c22.379-44.779,49.984-88.149,76.672-130.091l12.16-19.136c15.061-23.808,23.019-51.307,23.019-79.531 c0-42.496-18.197-83.115-49.92-111.445C323.727,10.592,281.082-2.975,238.565,2.017C172.175,9.569,117.349,63.03,108.154,129.121 c-5.44,39.168,4.352,78.059,27.541,109.547C171.877,287.691,200.122,342.241,228.239,398.518z M256.015,86.347 c35.285,0,64,28.715,64,64c0,35.285-28.715,64-64,64s-64-28.715-64-64C192.015,115.062,220.73,86.347,256.015,86.347z"></path></svg>
+                <div class="location-text">
+                    <span class="deliver-to">Deliver to</span>
+                    <a href="location.html" class="location-link">
+                        <span class="location-name">Bangalore</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon down-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="cart-auth-container">
+                <button class="cart-button" id="cart-button">
+                    <div class="cart-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="10" cy="21" r="1"></circle>
+                            <circle cx="18" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 12.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count">0</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="cart-popup" id="cart-popup">
+        <div class="cart-popup-content">
+            <div class="cart-popup-header">
+                <h3>Your Cart</h3>
+            </div>
+            
+                <div class="cart-items" id="cart-items">
+                    <!-- Empty cart message -->
+                    <div id="empty-cart">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cart summary (Subtotal, Delivery Charges, Grand Total) -->
+            <div class="cart-summary-footer" id="cart-summary">
+                <div class="cart-summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="cart-summary-row">
+                    <span>Delivery Charges:</span>
+                    <span id="delivery-charges">$5.00</span>
+                </div>
+                <div class="cart-summary-row grand-total">
+                    <span>Grand Total:</span>
+                    <span id="grand-total">$5.00</span>
+                </div>
+                <button class="checkout-btn" id="checkout-btn" onclick="window.location.href='checkout.html'">Checkout (0)</button>
+            </div>
+        </div>
+    </div>
+    <section class="advertisement-fold">
+        <div class="advertisement-image-container">
+            <img src="https://g-cdn.blinkco.io/ordering-system/55742/web_splash/1730039225.png" alt="Advertisement" class="advertisement-image">
+        </div>
+    </section>
+    <nav class="menu-bar">
+        <div class="menu-content">
+            <ul class="menu-list">
+                <a href="#starters" class="menu-link">STARTERS</a>
+                <a href="#nuggets" class="menu-link">NUGGETS</a>
+                <a href="#roll" class="menu-link">ROLL</a>
+                <a href="#sandwich" class="menu-link">SANDWICH</a>
+                <a href="#fillet" class="menu-link">FILLET</a>
+                <a href="#buffalo_sause" class="menu-link">BUFFALO SAUSE</a>
+                <a href="#smoky_grill_barbeque" class="menu-link">SMOKY GRILL BARBEQUE</a>
+                <a href="#broasted_chicken" class="menu-link">BROASTED CHICKEN</a>
+                <a href="#burger" class="menu-link">BURGER</a>
+                <a href="#smash_chicken_burger" class="menu-link">SMASH CHICKEN BURGER</a>
+                <a href="#quick_meal" class="menu-link">QUICK MEAL</a>
+                <a href="#personal_meal" class="menu-link">PERSONAL MEAL</a>
+                <a href="#value_pack" class="menu-link">VALUE PACK</a>
+                <a href="#combo" class="menu-link">COMBO</a>
+                <a href="#pizza" class="menu-link">PIZZA</a>
+                <a href="#mojito" class="menu-link">MOJITO</a>
+                <a href="#milkshakes" class="menu-link">MILKSHAKES</a>
+                <a href="#kuluki_sarbath" class="menu-link">KULUKI SARBATH</a>
+                <a href="#malba" class="menu-link">MALBA</a>
+                <a href="#falooda" class="menu-link">FALOODA</a>
+                <a href="#milkshakesWIC" class="menu-link">MILKSHAKES (WITH ICE-CREAM)</a>
+                <a href="#monster_shakes" class="menu-link">MONSTER SHAKES</a>
+                <a href="#fruit_shakes" class="menu-link">FRUIT SHAKES</a>
+                <a href="#IC_shakes" class="menu-link">ICE-CREAM SHAKES</a>
+                <a href="#fresh_juices" class="menu-link">FRESH JUICES</a>
+                <a href="#lime_fresh" class="menu-link">LIME FRESH</a>
+                <a href="#lassi" class="menu-link">LASSI</a>
+            </ul>
+             
+        </div>
+    </nav>
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <div class="search-bar">
+            <div class="search-content">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" class="search-input" placeholder="Search for products.....">
+            </div>
+        </div>
+    </div>
+
+    <div id="starters" class="menu-section">
+        <h2 class="section-heading">Starters</h2>
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="French Fries">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">French Fries</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="French Fries" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+    
+            <!-- Product 2 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Peri Peri">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Peri Peri</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹120</span>
+                    <button class="add-to-cart-btn" data-name="Peri Peri" data-price="₹120" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+    
+            <!-- Product 3 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Cheese Loaded Fries">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Cheese Loaded Fries</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹150</span>
+                    <button class="add-to-cart-btn" data-name="Cheese Loaded Fries" data-price="₹150" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Crunchy Chicken Loaded Fries">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Crunchy Chicken Loaded Fries</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹200</span>
+                    <button class="add-to-cart-btn" data-name="Crunchy Chicken Loaded Fries" data-price="200.00" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="nuggets" class="menu-section">
+        <h2 class="section-heading">Nuggets</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Veg Nuggets">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Veg Nuggets</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹99</span>
+                    <button class="add-to-cart-btn" data-name="Veg Nuggets" data-price="₹99" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Chicken Nuggets">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Chicken Nuggets</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹129</span>
+                    <button class="add-to-cart-btn" data-name="Chicken Nuggets" data-price="₹129" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Chicken Popcorn">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Chicken Popcorn</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹129</span>
+                    <button class="add-to-cart-btn" data-name="Chicken Popcorn" data-price="₹129" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Strips">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Strips(4 pieces)</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹169</span>
+                    <button class="add-to-cart-btn" data-name="Strips(4 pieces)" data-price="₹169" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Chicken Strips">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Chicken Strips ( 9 Pieces )</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹329</span>
+                    <button class="add-to-cart-btn" data-name="Chicken Strips ( 9 Pieces )" data-price="₹329" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="roll" class="menu-section">
+        <h2 class="section-heading">Rolls</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Veg Roll">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Veg Roll</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹70</span>
+                    <button class="add-to-cart-btn" data-name="Veg Roll" data-price="₹70" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Panner Roll">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Panner Roll</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹100</span>
+                    <button class="add-to-cart-btn" data-name="Panner Roll" data-price="₹100" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Tandoori Chicken Roll">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Tandoori Chicken Roll</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹140</span>
+                    <button class="add-to-cart-btn" data-name="Tandoori Chicken Roll" data-price="₹140" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Nuggets Roll">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Nuggets Roll</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹130</span>
+                    <button class="add-to-cart-btn" data-name="Nuggets Roll" data-price="₹130" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Crunchy Chicken Roll">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Crunchy Chicken Roll</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹130</span>
+                    <button class="add-to-cart-btn" data-name="Crunchy Chicken Roll" data-price="₹130" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="sandwich" class="menu-section">
+        <h2 class="section-heading">Sandwich</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Zinger Club Sandwich">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Zinger Club Sandwich</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹140</span>
+                    <button class="add-to-cart-btn" data-name="Zinger Club Sandwich" data-price="₹140" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Barbeque Club Sandwich">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Barbeque Club Sandwich</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹150</span>
+                    <button class="add-to-cart-btn" data-name="Barbeque Club Sandwich" data-price="₹150" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Tandoori Club Sandwich">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Tandoori Club Sandwich</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹150</span>
+                    <button class="add-to-cart-btn" data-name="Tandoori Club Sandwich" data-price="₹150" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Veg Club Sandwich">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Veg Club Sandwich</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹110</span>
+                    <button class="add-to-cart-btn" data-name="Veg Club Sandwich" data-price="₹110" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Egg Club Sandwich">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Egg Club Sandwich</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹120</span>
+                    <button class="add-to-cart-btn" data-name="Egg Club Sandwich" data-price="₹120" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="fillet" class="menu-section">
+        <h2 class="section-heading">Fillet</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Chicken Fillet">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Chicken Fillet</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹140</span>
+                    <button class="add-to-cart-btn" data-name="Chicken Fillet" data-price="₹140" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Fish Fillet">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Fish Fillet</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹150</span>
+                    <button class="add-to-cart-btn" data-name="Fish Fillet" data-price="₹150" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Fried Shrimp">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Fried Shrimp</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹150</span>
+                    <button class="add-to-cart-btn" data-name="Fried Shrimp" data-price="₹150" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="buffalo_sause" class="menu-section">
+        <h2 class="section-heading">Buffalo Sause</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Buffalo Wings">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Buffalo Wings ( 6 pcs )</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹170</span>
+                    <button class="add-to-cart-btn" data-name="Buffalo Wings ( 6 pcs )" data-price="₹170" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Buffalo Wings ( 12 pcs )">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Buffalo Wings ( 12 pcs )</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹330</span>
+                    <button class="add-to-cart-btn" data-name="Buffalo Wings ( 12 pcs )" data-price="₹330" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="smoky_grill_barbeque" class="menu-section">
+        <h2 class="section-heading">Smoky Grill Barbeque</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Leg Piece">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Leg Piece ( 2 pcs )</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹170</span>
+                    <button class="add-to-cart-btn" data-name="Leg Piece ( 2 pcs )" data-price="₹170" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Wings">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Wings ( 2 pcs )</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹330</span>
+                    <button class="add-to-cart-btn" data-name="Wings ( 2 pcs )" data-price="₹330" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="broasted_chicken" class="menu-section">
+        <h2 class="section-heading">Broasted Chicken</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Broasted Chicken">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Broasted Chicken ( 2 pcs )</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹159</span>
+                    <button class="add-to-cart-btn" data-name="Broasted Chicken ( 2 pcs )" data-price="₹159" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Broasted Chicken">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Broasted Chicken ( 4 pcs )</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹299</span>
+                    <button class="add-to-cart-btn" data-name="Broasted Chicken ( 4 pcs )" data-price="₹299" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Broasted Chicken">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Broasted Chicken ( 6 pcs )</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹389</span>
+                    <button class="add-to-cart-btn" data-name="Broasted Chicken ( 6 pcs )" data-price="₹389" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Broasted Chicken">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Broasted Chicken ( 8 pcs )</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹499</span>
+                    <button class="add-to-cart-btn" data-name="Broasted Chicken ( 8 pcs )" data-price="₹499" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+
+            
+        </div>
+    </div>
+    <div id="burger" class="menu-section">
+        <h2 class="section-heading">Burger</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Zinger Burger">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Zinger Burger</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹140</span>
+                    <button class="add-to-cart-btn" data-name="Zinger Burger" data-price="₹140" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Zinger X Burger">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Zinger X Burger</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹160</span>
+                    <button class="add-to-cart-btn" data-name="Zinger X Burger" data-price="₹160" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Korean Fried Chicken Burger">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Korean Fried Chicken Burger</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹230</span>
+                    <button class="add-to-cart-btn" data-name="Korean Fried Chicken Burger" data-price="₹230" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Nashville Fried Chicken Burger">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Nashville Fried Chicken Burger</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹230</span>
+                    <button class="add-to-cart-btn" data-name="Nashville Fried Chicken Burger" data-price="₹230" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Big Mac">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Big Mac</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹170</span>
+                    <button class="add-to-cart-btn" data-name="Big Mac" data-price="₹170" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            
+        </div>
+    </div>
+    <div id="smash_chicken_burger" class="menu-section">
+        <h2 class="section-heading">Smash Chicken Burger</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Double Cheese Smash Burger">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Double Cheese Smash Burger</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹190</span>
+                    <button class="add-to-cart-btn" data-name="Double Cheese Smash Burger" data-price="₹190" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Chimichurri Smash Burger">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Chimichurri Smash Burger</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹190</span>
+                    <button class="add-to-cart-btn" data-name="Chimichurri Smash Burger" data-price="₹190" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Pam Chicken Smash Burger">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Pam Chicken Smash Burger</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹180</span>
+                    <button class="add-to-cart-btn" data-name="Korean Fried Chicken Burger" data-price="₹180" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Classic Chicken Smash Burger">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Classic Chicken Smash Burger</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹190</span>
+                    <button class="add-to-cart-btn" data-name="Classic Chicken Smash Burger" data-price="₹190" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Classic Patty Burger">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Classic Patty Burger</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Classic Patty Burger" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Veg Patty Burger">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Veg Patty Burger</h3>
+                    <p class="product-description">8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice</p>
+                    <span class="product-price">₹70</span>
+                    <button class="add-to-cart-btn" data-name="Veg Patty Burger" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Hot Chicken Tenders With 4 Dipping Sauces of Your Choice">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="quick_meal" class="menu-section">
+        <h2 class="section-heading">Quick Meal</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Quick Meal">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Quick Meal</h3>
+                    <p class="product-description">2 leg piece,1 Wings,250ml Pepsi</p>
+                    <span class="product-price">₹250</span>
+                    <button class="add-to-cart-btn" data-name="Quick Meal" data-price="₹250" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="2 leg piece,1 Wings,250ml Pepsi">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            
+        </div>
+    </div>
+    <div id="personal_meal" class="menu-section">
+        <h2 class="section-heading">Personal Meal</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Personal Meal">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Personal Meal</h3>
+                    <p class="product-description">1 leg piece,2 Strips,1 Popcorn,250ml Pepsi</p>
+                    <span class="product-price">₹190</span>
+                    <button class="add-to-cart-btn" data-name="Personal Meal" data-price="₹190" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="1 leg piece,2 Strips,1 Popcorn,250ml Pepsi">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            
+        </div>
+    </div>
+    <div id="value_pack" class="menu-section">
+        <h2 class="section-heading">Value Pack</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Value Pack">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Value Pack</h3>
+                    <p class="product-description">1 Fried Chicken,Zinger Burger,250ml Pepsi</p>
+                    <span class="product-price">₹260</span>
+                    <button class="add-to-cart-btn" data-name="Value Pack" data-price="₹260" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="1 Fried Chicken,Zinger Burger,250ml Pepsi">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Value Pack">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Value Pack</h3>
+                    <p class="product-description">3pcs Strips,2pcs Wings,250ml Pepsi</p>
+                    <span class="product-price">₹275</span>
+                    <button class="add-to-cart-btn" data-name="Value Pack" data-price="₹275" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="3pcs Strips,2pcs Wings,250ml Pepsi">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            
+        </div>
+    </div>
+    <div id="combo" class="menu-section">
+        <h2 class="section-heading">Combo</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="ONE-PIECE">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">ONE-PIECE</h3>
+                    <p class="product-description">1 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce</p>
+                    <span class="product-price">₹69</span>
+                    <button class="add-to-cart-btn" data-name="ONE-PIECE" data-price="₹69" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="1 Fried Chicken,Kuboos,Mayonnaise,Tomato Sauce">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="SNACK MEAL">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">SNACK MEAL</h3>
+                    <p class="product-description">2 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce</p>
+                    <span class="product-price">₹129</span>
+                    <button class="add-to-cart-btn" data-name="SNACK MEAL" data-price="₹129" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="2 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="HALF MEAL">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">HALF MEAL</h3>
+                    <p class="product-description">4 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce</p>
+                    <span class="product-price">₹249</span>
+                    <button class="add-to-cart-btn" data-name="HALF MEAL" data-price="₹249" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="4 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="JUMBO MEAL">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">JUMBO MEAL</h3>
+                    <p class="product-description">6 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce</p>
+                    <span class="product-price">₹369</span>
+                    <button class="add-to-cart-btn" data-name="JUMBO MEAL" data-price="₹369" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="6 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Full MEAL">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">FULL MEAL</h3>
+                    <p class="product-description">8 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce,French Fries</p>
+                    <span class="product-price">₹479</span>
+                    <button class="add-to-cart-btn" data-name="FULL MEAL" data-price="₹479" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="8 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce,French Fries">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="SPECIAL MEAL">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">SPECIAL MEAL</h3>
+                    <p class="product-description">10 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce,French Fries</p>
+                    <span class="product-price">₹549</span>
+                    <button class="add-to-cart-btn" data-name="SPECIAL MEAL" data-price="₹549" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="10 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce,French Fries">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="FULL MEAL COMBO">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">FULL MEAL COMBO</h3>
+                    <p class="product-description">8 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce,French Fries,500ml Pepsi/7up/Dew</p>
+                    <span class="product-price">₹519</span>
+                    <button class="add-to-cart-btn" data-name="FULL MEAL COMBO" data-price="₹519" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="10 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce,French Fries,500ml Pepsi/7up/Dew">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="SPECIAL MEAL COMBO">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">SPECIAL MEAL COMBO</h3>
+                    <p class="product-description">10 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce,French Fries,1L Pepsi/7up/Dew</p>
+                    <span class="product-price">₹609</span>
+                    <button class="add-to-cart-btn" data-name="SPECIAL MEAL COMBO" data-price="₹609" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="10 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce,French Fries,1L Pepsi/7up/Dew">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="EXPRESS MEAL">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">EXPRESS MEAL</h3>
+                    <p class="product-description">12 Fried Chicken,Kuboos, Mayonnaise,Tomato Sauce,French Fries</p>
+                    <span class="product-price">₹649</span>
+                    <button class="add-to-cart-btn" data-name="EXPRESS MEAL" data-price="₹649" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="10 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce,French Fries">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="EXPRESS MEAL COMBO">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">EXPRESS MEAL COMBO</h3>
+                    <p class="product-description">12 Fried Chicken,Kuboos, Mayonnaise,Tomato Sauce,French Fries,1L Pepsi/7up/Dew</p>
+                    <span class="product-price">₹709</span>
+                    <button class="add-to-cart-btn" data-name="EXPRESS MEAL COMBO" data-price="₹709" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="12 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce,French Fries,1L Pepsi/7up/Dew">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="EXPRESS MEAL COMBO">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">EXPRESS MEAL COMBO</h3>
+                    <p class="product-description">18 Fried Chicken,Kuboos, Mayonnaise,Tomato Sauce,French Fries,2L Pepsi/7up/Dew</p>
+                    <span class="product-price">₹1029</span>
+                    <button class="add-to-cart-btn" data-name="EXPRESS MEAL COMBO" data-price="₹1029" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="18 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce,French Fries,2L Pepsi/7up/Dew">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="EXPRESS FAMILY">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">EXPRESS FAMILY</h3>
+                    <p class="product-description">20 Fried Chicken,Kuboos, Mayonnaise,Tomato Sauce,French Fries</p>
+                    <span class="product-price">₹1059</span>
+                    <button class="add-to-cart-btn" data-name="EXPRESS FAMILY" data-price="₹1059" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="18 Fried Chicken,Kuboos,Mayonnaise, Tomato Sauce,French Fries">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="mojito" class="menu-section">
+        <h2 class="section-heading">Mojito</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Virgin Mojito">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Virgin Mojito</h3>
+                    <span class="product-price">₹70</span>
+                    <button class="add-to-cart-btn" data-name="Virgin Mojito" data-price="₹70" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Blue Lagoon">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Blue Lagoon</h3>
+                    <span class="product-price">₹70</span>
+                    <button class="add-to-cart-btn" data-name="Blue Lagoon" data-price="₹70" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Passion Fruit">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Passion Fruit</h3>
+                    <span class="product-price">₹80</span>
+                    <button class="add-to-cart-btn" data-name="Passion Fruit" data-price="₹80" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Spicy Mango">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Spicy Mango</h3>
+                    <span class="product-price">₹80</span>
+                    <button class="add-to-cart-btn" data-name="Spicy Mango" data-price="₹80" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Green Apple">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Green Apple</h3>
+                    <span class="product-price">₹80</span>
+                    <button class="add-to-cart-btn" data-name="Green Apple" data-price="₹80" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Fizzito">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Fizzito</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Fizzito" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Spicy Gladiator">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Spicy Gladiator</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Spicy Gladiator" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Toxi Tonic">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Toxi Tonic</h3>
+                    <span class="product-price">₹100</span>
+                    <button class="add-to-cart-btn" data-name="Toxi Tonic" data-price="₹100" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Watermelon">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Watermelon</h3>
+                    <span class="product-price">₹70</span>
+                    <button class="add-to-cart-btn" data-name="Watermelon" data-price="₹70" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Crave Hut Special ">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Crave Hut Special </h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Crave Hut Special " data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            
+        </div>
+    </div>
+    <div id="milkshakes" class="menu-section">
+        <h2 class="section-heading">Milkshakes</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Banana Gulkand">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Banana Gulkand</h3>
+                    <span class="product-price">₹80</span>
+                    <button class="add-to-cart-btn" data-name="Banana Gulkand" data-price="₹80" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Kaju Kishmish">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Kaju Kishmish</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Kaju Kishmish" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Fig And Honey">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Fig And Honey</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Fig And Honey" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Gulab Jamun">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Gulab Jamun</h3>
+                    <span class="product-price">₹80</span>
+                    <button class="add-to-cart-btn" data-name="Gulab Jamun" data-price="₹80" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Caramel Nuts">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Caramel Nuts</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Caramel Nuts" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Sharjah Special">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Sharjah Special</h3>
+                    <span class="product-price">₹80</span>
+                    <button class="add-to-cart-btn" data-name="Sharjah Special" data-price="₹80" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Saudi Shakes">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Saudi Shakes</h3>
+                    <span class="product-price">₹80</span>
+                    <button class="add-to-cart-btn" data-name="Saudi Shakes" data-price="₹80" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Classic Oreo">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Classic Oreo</h3>
+                    <span class="product-price">₹80</span>
+                    <button class="add-to-cart-btn" data-name="Classic Oreo" data-price="₹80" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Oreo With Red Velvet">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Oreo With Red Velvet</h3>
+                    <span class="product-price">₹100</span>
+                    <button class="add-to-cart-btn" data-name="Oreo With Red Velvet" data-price="₹100" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Snickers">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Snickers</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Snickers" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Kitkat">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Kitkat</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Kitkat" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Milo">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Milo</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Milo" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Bournvita">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Bournvita</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Bournvita" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Coffee Boost">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Coffee Boost</h3>
+                    <span class="product-price">₹80</span>
+                    <button class="add-to-cart-btn" data-name="Coffee Boost" data-price="₹80" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Belgium Dark Chocolate">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Belgium Dark Chocolate</h3>
+                    <span class="product-price">₹100</span>
+                    <button class="add-to-cart-btn" data-name="Belgium Dark Chocolate" data-price="₹100" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Tender Coconut">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Tender Coconut</h3>
+                    <span class="product-price">₹80</span>
+                    <button class="add-to-cart-btn" data-name="Tender Coconut" data-price="₹80" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Tender Boost">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Tender Boost</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Tender Boost" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Tender Mango">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Tender Mango</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Tender Mango" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Tender Horlicks">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Tender Horlicks</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Tender Horlicks" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Dry Fruit Milkshake">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Dry Fruit Milkshake</h3>
+                    <span class="product-price">₹100</span>
+                    <button class="add-to-cart-btn" data-name="Dry Fruit Milkshake" data-price="₹100" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="kuluki_sarbath" class="menu-section">
+        <h2 class="section-heading">Kuluki Sarbath</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Lemon Kulukki">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Lemon Kulukki</h3>
+                    <span class="product-price">₹60</span>
+                    <button class="add-to-cart-btn" data-name="Lemon Kulukki" data-price="₹60" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Mango Kulukki">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Mango Kulukki</h3>
+                    <span class="product-price">₹70</span>
+                    <button class="add-to-cart-btn" data-name="Mango Kulukki" data-price="₹70" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Pineapple kulukki">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Pineapple kulukki</h3>
+                    <span class="product-price">₹70</span>
+                    <button class="add-to-cart-btn" data-name="Pineapple kulukki" data-price="₹70" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Orange kulukki">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Orange kulukki</h3>
+                    <span class="product-price">₹70</span>
+                    <button class="add-to-cart-btn" data-name="Orange kulukki" data-price="₹70" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="malba" class="menu-section">
+        <h2 class="section-heading">Malba</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Tender">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Tender</h3>
+                    <span class="product-price">₹120</span>
+                    <button class="add-to-cart-btn" data-name="Tender" data-price="₹120" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Apple">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Apple</h3>
+                    <span class="product-price">₹120</span>
+                    <button class="add-to-cart-btn" data-name="Apple" data-price="₹120" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Chikku">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Chikku</h3>
+                    <span class="product-price">₹120</span>
+                    <button class="add-to-cart-btn" data-name="Chikku" data-price="₹120" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Mango">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Mango</h3>
+                    <span class="product-price">₹120</span>
+                    <button class="add-to-cart-btn" data-name="Mango" data-price="₹120" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Special Kerala Aval / Milk">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Special Kerala Aval / Milk</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Special Kerala Aval / Milk" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="falooda" class="menu-section">
+        <h2 class="section-heading">Falooda</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Falooda Normal">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Falooda Normal</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Falooda Normal" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Royal Falooda ">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Royal Falooda </h3>
+                    <span class="product-price">₹130</span>
+                    <button class="add-to-cart-btn" data-name="Royal Falooda " data-price="₹130" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Fruit Punch">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Fruit Punch</h3>
+                    <span class="product-price">₹120</span>
+                    <button class="add-to-cart-btn" data-name="Fruit Punch" data-price="₹120" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Rose Falooda">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Rose Falooda</h3>
+                    <span class="product-price">₹120</span>
+                    <button class="add-to-cart-btn" data-name="Rose Falooda" data-price="₹120" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Choco Falooda">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Choco Falooda </h3>
+                    <span class="product-price">₹130</span>
+                    <button class="add-to-cart-btn" data-name="Choco Falooda " data-price="₹130" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Crave Hut Special Falooda">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Crave Hut Special Falooda</h3>
+                    <span class="product-price">₹140</span>
+                    <button class="add-to-cart-btn" data-name="Crave Hut Special Falooda" data-price="₹140" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Bucket Falooda">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Bucket Falooda </h3>
+                    <span class="product-price">₹250</span>
+                    <button class="add-to-cart-btn" data-name="Bucket Falooda " data-price="₹250" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="monster_shakes" class="menu-section">
+        <h2 class="section-heading">Monster Shakes</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Oreo Cookie Milkshake">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Oreo Cookie Milkshake</h3>
+                    <span class="product-price">₹240</span>
+                    <button class="add-to-cart-btn" data-name="Oreo Cookie Milkshake" data-price="₹240" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Cookie Caramel Milkshake">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Cookie Caramel Milkshake</h3>
+                    <span class="product-price">₹240</span>
+                    <button class="add-to-cart-btn" data-name="Cookie Caramel Milkshake" data-price="₹240" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Children Delights ">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Children Delights </h3>
+                    <span class="product-price">₹250</span>
+                    <button class="add-to-cart-btn" data-name="Children Delights " data-price="₹250" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Popcorn Freak Shake">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Popcorn Freak Shake</h3>
+                    <span class="product-price">₹230</span>
+                    <button class="add-to-cart-btn" data-name="Popcorn Freak Shake" data-price="₹230" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Kitkat Freak Shake ">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Kitkat Freak Shake </h3>
+                    <span class="product-price">₹250</span>
+                    <button class="add-to-cart-btn" data-name="Kitkat Freak Shake " data-price="₹250" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Oreo Frak Shake">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Oreo Frak Shake</h3>
+                    <span class="product-price">₹220</span>
+                    <button class="add-to-cart-btn" data-name="Oreo Frak Shake" data-price="₹220" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Ferraro Freak Shake">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Ferraro Freak Shake</h3>
+                    <span class="product-price">₹270</span>
+                    <button class="add-to-cart-btn" data-name="Ferraro Freak Shake" data-price="₹270" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Lotus Biscopp Freak Shake ">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Lotus Biscopp Freak Shake </h3>
+                    <span class="product-price">₹290</span>
+                    <button class="add-to-cart-btn" data-name="Lotus Biscopp Freak Shake " data-price="₹290" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="fruit_shakes" class="menu-section">
+        <h2 class="section-heading">Fruit Shakes</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Chikku">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Chikku</h3>
+                    <span class="product-price">₹80</span>
+                    <button class="add-to-cart-btn" data-name="Chikku" data-price="₹80" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Papaya">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Papaya</h3>
+                    <span class="product-price">₹70</span>
+                    <button class="add-to-cart-btn" data-name="Papaya" data-price="₹70" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Grape">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Grape</h3>
+                    <span class="product-price">₹70</span>
+                    <button class="add-to-cart-btn" data-name="Grape" data-price="₹70" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Sharjah">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Sharjah</h3>
+                    <span class="product-price">₹80</span>
+                    <button class="add-to-cart-btn" data-name="Sharjah" data-price="₹80" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Tender">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Tender</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Tender" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Anar">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Anar</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Anar" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Carrot">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Carrot</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Carrot" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Apple">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Apple</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Apple" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Cocktail">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Cocktail</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Cocktail" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Mango">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Mango</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Mango" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Seethapalam">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Seethapalam</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Seethapalam" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Butter">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Butter</h3>
+                    <span class="product-price">₹100</span>
+                    <button class="add-to-cart-btn" data-name="Butter" data-price="₹100" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Strawberry">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Strawberry</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Strawberry" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Shamam">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Shamam</h3>
+                    <span class="product-price">₹60</span>
+                    <button class="add-to-cart-btn" data-name="Shamam" data-price="₹60" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Dry Fruits">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Dry Fruits</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Dry Fruits" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="IC_shakes" class="menu-section">
+        <h2 class="section-heading">Ice Cream Shakes</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Vanilla">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Vanilla</h3>
+                    <span class="product-price">₹100</span>
+                    <button class="add-to-cart-btn" data-name="Vanilla" data-price="₹100" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Oreo">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Oreo</h3>
+                    <span class="product-price">₹110</span>
+                    <button class="add-to-cart-btn" data-name="Oreo" data-price="₹110" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Kitkat">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Kitkat</h3>
+                    <span class="product-price">₹110</span>
+                    <button class="add-to-cart-btn" data-name="Kitkat" data-price="₹110" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Strawberry">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Strawberry</h3>
+                    <span class="product-price">₹110</span>
+                    <button class="add-to-cart-btn" data-name="Strawberry" data-price="₹110" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Butterscotch">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Butterscotch</h3>
+                    <span class="product-price">₹120</span>
+                    <button class="add-to-cart-btn" data-name="Butterscotch" data-price="₹120" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Mango">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Mango</h3>
+                    <span class="product-price">₹100</span>
+                    <button class="add-to-cart-btn" data-name="Mango" data-price="₹100" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Blackcurrant">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Blackcurrant</h3>
+                    <span class="product-price">₹110</span>
+                    <button class="add-to-cart-btn" data-name="Blackcurrant" data-price="₹110" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Pista">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Pista</h3>
+                    <span class="product-price">₹100</span>
+                    <button class="add-to-cart-btn" data-name="Pista" data-price="₹100" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="fresh_juices" class="menu-section">
+        <h2 class="section-heading">Fresh Juices</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Orange">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Orange</h3>
+                    <span class="product-price">₹70</span>
+                    <button class="add-to-cart-btn" data-name="Orange" data-price="₹70" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Sathukudi">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Sathukudi</h3>
+                    <span class="product-price">₹60</span>
+                    <button class="add-to-cart-btn" data-name="Sathukudi" data-price="₹60" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Pineapple">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Pineapple</h3>
+                    <span class="product-price">₹70</span>
+                    <button class="add-to-cart-btn" data-name="Pineapple" data-price="₹70" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Grape">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Grape</h3>
+                    <span class="product-price">₹60</span>
+                    <button class="add-to-cart-btn" data-name="Grape" data-price="₹60" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Anar">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Anar</h3>
+                    <span class="product-price">₹70</span>
+                    <button class="add-to-cart-btn" data-name="Anar" data-price="₹70" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Strawberry">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Strawberry</h3>
+                    <span class="product-price">₹70</span>
+                    <button class="add-to-cart-btn" data-name="Strawberry" data-price="₹70" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Mango">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Mango</h3>
+                    <span class="product-price">₹70</span>
+                    <button class="add-to-cart-btn" data-name="Mango" data-price="₹70" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Papaya">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Papaya</h3>
+                    <span class="product-price">₹50</span>
+                    <button class="add-to-cart-btn" data-name="Papaya" data-price="₹50" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="lime_fresh" class="menu-section">
+        <h2 class="section-heading">Lime Fresh</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Lime">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Lime</h3>
+                    <span class="product-price">₹25</span>
+                    <button class="add-to-cart-btn" data-name="Lime" data-price="₹25" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Mint">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Mint</h3>
+                    <span class="product-price">₹30</span>
+                    <button class="add-to-cart-btn" data-name="Mint" data-price="₹30" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Orange">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Orange</h3>
+                    <span class="product-price">₹40</span>
+                    <button class="add-to-cart-btn" data-name="Orange" data-price="₹40" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Pineapple">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Pineapple</h3>
+                    <span class="product-price">₹40</span>
+                    <button class="add-to-cart-btn" data-name="Pineapple" data-price="₹40" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Tender">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Tender</h3>
+                    <span class="product-price">₹40</span>
+                    <button class="add-to-cart-btn" data-name="Tender" data-price="₹40" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="lassi" class="menu-section">
+        <h2 class="section-heading">Lassi</h2>
+
+        <!-- Product Boxes -->
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Sweet">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Sweet</h3>
+                    <span class="product-price">₹60</span>
+                    <button class="add-to-cart-btn" data-name="Sweet" data-price="₹60" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Fruit">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Fruit</h3>
+                    <span class="product-price">₹80</span>
+                    <button class="add-to-cart-btn" data-name="Fruit" data-price="₹80" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Mango">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Mango</h3>
+                    <span class="product-price">₹80</span>
+                    <button class="add-to-cart-btn" data-name="Mango" data-price="₹80" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Dry Fruits">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Dry Fruits</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Dry Fruits" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" alt="Tender">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Tender</h3>
+                    <span class="product-price">₹90</span>
+                    <button class="add-to-cart-btn" data-name="Tender" data-price="₹90" data-image="https://em-cdn.eatmubarak.pk/55742/dish_image/1727037052.png" data-description="">Add to Cart</button>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon favorite-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo and Company Info -->
+        <div class="footer-left">
+            <img src="C:\Users\Aditya Baheti\Desktop\Chunkyschicken\Cravehut logo design-03.png" alt="Company Logo" class="footer-logo">
+            <div class="footer-company-info">
+                <h2>Crave Hut</h2>
+                <div class="footer-contact">
+                    <h3>Phone:</h3>
+                    <p>123-456-7890</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Email:</h3>
+                    <p>support@chuckyschicken.com</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Address:</h3>
+                    <p>Chuckys Chicken - i-8 markaz, shop# g-01 ground floor plot 9, I-8 Markaz, Islamabad, 44000</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timings Section -->
+        <div class="footer-center">
+            <div class="footer-timings">
+                <h3>Our Timings</h3>
+                <p>MONDAY-SUNDAY</p>
+                <p>12:00 PM - 2:00 AM</p>
+            </div>
+        </div>
+
+        <!-- Sitemap Section -->
+        <div class="footer-right">
+            <a href="#home"><h3>Sitemap</h3></a>
+        </div>
+    </div>
+    <!-- Horizontal Line -->
+    <hr class="footer-divider">
+    <!-- Copyright Section -->
+    <div class="footer-copyright">
+        <p>&copy; 2024 Chuckys chicken. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || []; // Load cart items from localStorage if available, otherwise initialize as empty array
+    const deliveryCharges = 50.00; // Fixed delivery charges in rupees
+
+    // Get elements
+    const cartButton = document.getElementById("cart-button");
+    const cartPopup = document.getElementById("cart-popup");
+    const cartItemsContainer = document.getElementById("cart-items");
+    const emptyCartMessage = document.getElementById("empty-cart");
+    const cartSummary = document.getElementById("cart-summary");
+    const subtotalElement = document.getElementById("subtotal");
+    const deliveryChargesElement = document.getElementById("delivery-charges");
+    const grandTotalElement = document.getElementById("grand-total");
+    const checkoutButton = document.getElementById("checkout-btn");
+    const cartCount = document.querySelector(".cart-count"); // Cart count element
+
+    // Update cart count in the cart button and checkout button
+    function updateCartCount() {
+        const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0); // Total quantity in the cart
+        cartCount.textContent = totalItems; // Update the cart icon count
+        checkoutButton.textContent = `Checkout (${totalItems})`; // Update checkout button with total item count
+    }
+
+    // Calculate subtotal, delivery charges, and grand total
+    function updateCartSummary() {
+        let subtotal = 0;
+        cartItems.forEach(item => {
+            subtotal += parseFloat(item.price.replace('₹', '')) * item.quantity; // Calculate subtotal
+        });
+
+        const grandTotal = subtotal + deliveryCharges; // Calculate grand total
+
+        // Update the UI elements
+        subtotalElement.textContent = `Subtotal: ₹${subtotal.toFixed(2)}`;
+        deliveryChargesElement.textContent = `Delivery: ₹${deliveryCharges.toFixed(2)}`;
+        grandTotalElement.textContent = `Grand Total: ₹${grandTotal.toFixed(2)}`;
+    }
+
+    // Update cart items in the popup
+    function updateCartItems() {
+        cartItemsContainer.innerHTML = ""; // Clear current items
+        if (cartItems.length === 0) {
+            emptyCartMessage.style.display = "block"; // Show "Your cart is empty" message
+            cartSummary.style.display = "none"; // Hide the summary section
+            checkoutButton.style.display = "none"; // Hide the checkout button
+        } else {
+            emptyCartMessage.style.display = "none"; // Hide "Your cart is empty" message
+            cartSummary.style.display = "block"; // Show summary section
+            checkoutButton.style.display = "block"; // Show checkout button
+
+            // Create cart items UI
+            cartItems.forEach((item, index) => {
+                const cartItemDiv = document.createElement("div");
+                cartItemDiv.classList.add("cart-item");
+
+                cartItemDiv.innerHTML = `
+                    <div class="cart-item-image">
+                        <img src="${item.image}" alt="${item.name}">
+                    </div>
+                    <div class="cart-item-details">
+                        <h4 class="cart-item-title">${item.name}</h4>
+                        <p class="cart-item-description">${item.description}</p>
+                        <div class="cart-item-controls">
+                            <div class="cart-item-quantity">
+                                <button class="quantity-btn quantity-decrease" data-index="${index}">-</button>
+                                <span class="quantity">${item.quantity}</span>
+                                <button class="quantity-btn quantity-increase" data-index="${index}">+</button>
+                            </div>
+                            <button class="delete-btn" data-index="${index}">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path d="M19 6L17.2 20.2A1 1 0 0 1 16.2 21H7.8A1 1 0 0 1 6.8 20.2L5 6M10 11V17M14 11V17M15 4L9 4"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="cart-item-price">₹${(parseFloat(item.price.replace('₹', '')) * item.quantity).toFixed(2)}</div>
+                    </div>
+                `;
+                
+                cartItemsContainer.appendChild(cartItemDiv); // Append the item to the container
+            });
+
+            // Attach event listeners for quantity buttons and delete buttons
+            const increaseButtons = document.querySelectorAll(".quantity-increase");
+            const decreaseButtons = document.querySelectorAll(".quantity-decrease");
+            const deleteButtons = document.querySelectorAll(".delete-btn");
+
+            increaseButtons.forEach(button => {
+                button.addEventListener("click", function (event) {
+                    event.stopPropagation(); // Prevent closing the popup
+                    const index = parseInt(this.getAttribute("data-index"));
+                    changeQuantity(index, 'increase');
+                });
+            });
+
+            decreaseButtons.forEach(button => {
+                button.addEventListener("click", function (event) {
+                    event.stopPropagation(); // Prevent closing the popup
+                    const index = parseInt(this.getAttribute("data-index"));
+                    changeQuantity(index, 'decrease');
+                });
+            });
+
+            deleteButtons.forEach(button => {
+                button.addEventListener("click", function (event) {
+                    event.stopPropagation(); // Prevent closing the popup
+                    const index = parseInt(this.getAttribute("data-index"));
+                    deleteItem(index);
+                });
+            });
+        }
+        updateCartSummary(); // Update the cart summary
+    }
+
+    // Function to delete an item from the cart
+    function deleteItem(index) {
+        cartItems.splice(index, 1); // Remove the item at the specified index
+        localStorage.setItem('cartItems', JSON.stringify(cartItems)); // Save updated cart to localStorage
+        updateCartItems(); // Update cart items
+        updateCartCount(); // Update cart count
+    }
+
+    // Function to add item to the cart
+    function addToCart(name, price, image, description) {
+        const existingItem = cartItems.find(item => item.name === name);
+
+        if (existingItem) {
+            existingItem.quantity += 1; // Increase quantity if item exists
+        } else {
+            cartItems.push({ name, price, image, description, quantity: 1 }); // Add a new item
+        }
+
+        localStorage.setItem('cartItems', JSON.stringify(cartItems)); // Save cart to localStorage
+        updateCartItems(); // Update cart items
+        updateCartCount(); // Update cart count
+    }
+
+    // Change the quantity of an item in the cart
+    function changeQuantity(index, action) {
+        const item = cartItems[index];
+
+        if (action === "increase") {
+            item.quantity += 1;
+        } else if (action === "decrease" && item.quantity > 1) {
+            item.quantity -= 1;
+        }
+
+        localStorage.setItem('cartItems', JSON.stringify(cartItems)); // Save updated cart to localStorage
+        updateCartItems(); // Update items in the cart
+        updateCartCount(); // Update cart count
+    }
+
+    // Open cart popup when cart button is clicked
+    cartButton.addEventListener("click", function () {
+        cartPopup.classList.add("open"); // Open cart popup
+        updateCartItems(); // Update cart items in the popup
+    });
+
+    // Prevent closing cart popup when interacting inside the popup
+    cartPopup.addEventListener("click", function (event) {
+        event.stopPropagation(); // Stop the click event from propagating to the document
+    });
+
+    // Close cart popup when clicking outside the popup
+    document.addEventListener("click", function (event) {
+        if (!cartPopup.contains(event.target) && !cartButton.contains(event.target)) {
+            cartPopup.classList.remove("open"); // Close cart popup
+        }
+    });
+
+    // Add event listeners to all add-to-cart buttons
+    const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const name = this.getAttribute("data-name"); // Get the product name
+            const price = this.getAttribute("data-price"); // Get the product price
+            const image = this.getAttribute("data-image"); // Get the product image URL
+            const description = this.getAttribute("data-description"); // Get the product description
+            addToCart(name, price, image, description); // Add item to cart
+        });
+    });
+
+    updateCartCount(); // Update cart count on initial load
+    updateCartItems(); // Update cart items on initial load
+});
+
+</script>
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const menuContent = document.querySelector(".menu-content");
+    const menuLinks = document.querySelectorAll(".menu-link");
+    const slider = document.querySelector(".slider");
+
+    let isDragging = false;
+    let startX, scrollLeft;
+
+    menuContent.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        menuContent.classList.add("grabbing");
+        startX = e.pageX - menuContent.offsetLeft;
+        scrollLeft = menuContent.scrollLeft;
+    });
+
+    menuContent.addEventListener("mouseleave", () => {
+        isDragging = false;
+        menuContent.classList.remove("grabbing");
+    });
+
+    menuContent.addEventListener("mouseup", () => {
+        isDragging = false;
+        menuContent.classList.remove("grabbing");
+    });
+
+    menuContent.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - menuContent.offsetLeft;
+        const walk = (x - startX) * 2; // The scroll speed multiplier
+        menuContent.scrollLeft = scrollLeft - walk;
+    });
+    // Scroll back to the first item on page reload
+    menuContent.scrollLeft = 0;
+
+    
+});
+</script>
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.querySelector('.search-input');
+    const productSections = document.querySelectorAll('.menu-section');
+    const productBoxes = document.querySelectorAll('.product-box');
+
+    searchInput.addEventListener('input', function () {
+        const query = searchInput.value.toLowerCase();
+
+        productSections.forEach(function (section) {
+            const sectionHeading = section.querySelector('.section-heading');
+            const productBoxesInSection = section.querySelectorAll('.product-box');
+            let hasMatchingProduct = false;
+
+            productBoxesInSection.forEach(function (productBox) {
+                const productName = productBox.querySelector('.product-title').textContent.toLowerCase();
+                const productDescription = productBox.querySelector('.product-description') ? productBox.querySelector('.product-description').textContent.toLowerCase() : '';
+
+                if (productName.includes(query) || productDescription.includes(query)) {
+                    productBox.style.visibility = 'visible';
+                    productBox.style.position = 'relative';
+                    hasMatchingProduct = true;
+                } else {
+                    productBox.style.visibility = 'hidden';
+                    productBox.style.position = 'absolute';
+                }
+            });
+            if (hasMatchingProduct) {
+                sectionHeading.style.display = 'block';
+            } else {
+                sectionHeading.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
+    
+
+
