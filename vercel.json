@@ -1,7 +1,7 @@
 {
   "rewrites": [
     { "source": "/", "destination": "/Homepage.html" },
-    { "source": "/checkout", "destination": "/Checkout.html" }
+    { "source": "/checkout", "destination": "/Checkout.html" },
     { "source": "/thankyou", "destination": "/Thank You.html" }
   ]
 }
