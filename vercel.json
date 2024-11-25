@@ -1,6 +1,9 @@
 {
-    "rewrites": [
-      { "source": "/", "destination": "/Homepage.html" }
-        { "source": "/checkout", "destination": "/Checkout.html" }
-    ]
-  }
+  "redirects": [
+    {
+      "source": "/homepage",
+      "destination": "/Checkout.html",
+      "permanent": true
+    }
+  ]
+}
