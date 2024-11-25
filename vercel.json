@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "/homepage",
+      "source": "/Homepage.html",
       "destination": "/Checkout.html",
       "permanent": true
     }
