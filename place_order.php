@@ -81,7 +81,8 @@ $message .= "Total Price: " . number_format($totalPrice, 2) . " Rs \n";
 
 // Send email using SendGrid API// Replace with your actual SendGrid API key
 
-$sendgridApiKey = "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";
+
+$sendgridApiKey = getenv('SENDGRID_API_KEY');
 
 $sendgridUrl = "https://api.sendgrid.com/v3/mail/send";
 
