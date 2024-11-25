@@ -3,3 +3,8 @@
       { "source": "/", "destination": "/Homepage.html" }
     ]
   }
+{
+    "rewrites": [
+      { "source": "/", "destination": "/Checkout.html" }
+    ]
+  }
