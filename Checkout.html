@@ -315,7 +315,7 @@
           if (data.success) {
             alert("Your order has been placed successfully!");
             localStorage.removeItem("cartItems");
-            // window.location.href = "confirmation.html";
+            window.location.href = "Thank You.html";
           } else {
             throw new Error(data.message || "Unknown server error.");
           }
